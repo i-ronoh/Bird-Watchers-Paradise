@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_07_135243) do
+ActiveRecord::Schema.define(version: 2022_09_07_140334) do
 
   create_table "birds", force: :cascade do |t|
     t.string "name"
@@ -21,4 +21,13 @@ ActiveRecord::Schema.define(version: 2022_09_07_135243) do
     t.boolean "flies"
   end
 
+  create_table "sightings", force: :cascade do |t|
+    t.datetime "date_of_sighting"
+    t.string "location_of_sighting"
+    t.string "observation"
+    t.integer "birds_id"
+    t.index ["birds_id"], name: "index_sightings_on_birds_id"
+  end
+
+  add_foreign_key "sightings", "birds", column: "birds_id"
 end
