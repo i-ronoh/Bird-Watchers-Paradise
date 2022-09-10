@@ -1,6 +1,4 @@
 class BirdsController <  ApplicationController
-    
-
     # get '/birds' do
     #     all_birds = Bird.all
     #     all_birds.to_json
@@ -21,6 +19,7 @@ class BirdsController <  ApplicationController
             birds = birds.where('lower(feet_type) = ? ', params[:feet_type].downcase) unless params[:feet_type].nil?
             birds = birds.where('lower(flies) = ? ', params[:flies].downcase) unless params[:flies].nil?
         end
+        
         birds.to_json
     end
 
