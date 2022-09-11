@@ -1,0 +1,64 @@
+
+
+.bird-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    margin-left: 100px;
+    /*  */
+}
+.bird-head {
+    height: 50vh;
+    z-index: -1;
+    background-image: url(https://images.unsplash.com/photo-1620072908599-6807c940929c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+    object-fit: cover;
+}
+
+.bird-title {
+    position:relative;
+    top: 100px;
+    color: whitesmoke;
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(88, 78, 78);
+}
+.flexx {
+    display: flex !important;
+    border: 0.1px solid rgba(105, 103, 103, 0.849);
+    box-shadow: 0px 5px 5px 0px !important;
+    min-height:75vh;
+    position: relative !important;
+    top: -300px !important;
+    z-index: 1;
+    background-color: rgba(245, 245, 245, 0.308);
+}
+
+.flexx:hover {
+    transform: scale(1.01);
+}
+
+.card-img-top {
+    width:450px;
+    height: 450px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 25px;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.card-title {
+    color: #2596be;
+    font-family: 'Lora', serif;
+    font-weight: 900;
+    font-size: 1.5em;
+    letter-spacing: 0px;
+    font-style: capitalize;
+}
