@@ -136,6 +136,7 @@ GEM
     sinatra-activerecord (2.0.25)
       activerecord (>= 4.1)
       sinatra (>= 1.0)
+    sinatra-cross_origin (0.4.0)
     sqlite3 (1.4.4)
     stringio (3.0.2)
     thin (1.8.1)
@@ -169,6 +170,7 @@ DEPENDENCIES
   rspec-json_expectations (~> 2.2)
   sinatra (~> 2.1)
   sinatra-activerecord
+  sinatra-cross_origin
   sqlite3 (~> 1.4)
   thin (~> 1.8, >= 1.8.1)
   webrick (~> 1.7)

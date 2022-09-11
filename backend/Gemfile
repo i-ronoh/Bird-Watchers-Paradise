@@ -30,6 +30,9 @@ gem 'falcon', '~> 0.42.3'
 gem 'webrick', '~> 1.7'  
 gem 'psych', '~> 4.0', '>= 4.0.4'
 
+gem 'sinatra-cross_origin'
+
+
 # These gems will only be used when we are running the application locally
 group :development do
   # Used to generate seed data
