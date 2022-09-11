@@ -161,6 +161,10 @@ if Bird.count == 0
     end
 end
 
+if User.count == 0 
+    user = User.create(name: "Ivy", email: "ivy@yahoo.com", password: "ilovemybabe")
+    p "Created user with user id : #{user.id}"
+end
 
 
 puts "🌱 Done seeding!"
