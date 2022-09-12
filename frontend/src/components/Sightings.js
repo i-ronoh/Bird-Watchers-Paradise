@@ -1,11 +1,14 @@
 import React, {useMemo, useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useParams } from "react-router-dom";
 import "./sightings.css"
 
 const Sightings = () =>{
+    const {birds_id} = useParams();
 
-    const [sighting, setSighting] = useState({date_of_sighting: "",location_of_sighting: "", observation: "", birds_id: "", user_id: ""});
+    const [sighting, setSighting] = useState({date_of_sighting: "",location_of_sighting: "", observation: "", birds_id: birds_id, user_id: 1});
 
+    
     const navigate = useNavigate();
 
     const onFieldsChange = (fieldName, value)=>{
@@ -16,11 +19,12 @@ const Sightings = () =>{
     }
 
     const postSighting = (e)=>{
-        sighting.date_of_sighting = "";
-        sighting.location_of_sighting = "";
-        sighting.observation = "";
-        sighting.birds_id = "";
-        sighting.user_id = "";
+        // sighting.date_of_sighting = "";
+        // sighting.location_of_sighting = "";
+        // sighting.observation = "";
+        // sighting.birds_id = "";
+        // sighting.user_id = "";
+        console.log(sighting)
         let requestBody = {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
@@ -30,7 +34,7 @@ const Sightings = () =>{
             .then(response => response.json())
             .then(data => {
                 // do the redirect here here.
-                navigate('/sighting');
+                navigate('/sightings');
             }).catch((err)=>{
                 console.log(err);
             });
@@ -39,7 +43,7 @@ const Sightings = () =>{
 
     // returns whether the subit button should be active
     const submitButtonActive = useMemo(()=>(
-        sighting.date_of_sighting.trim().length !== 0 && sighting.location_of_sighting.trim().length !== 0 && sighting.observation.trim().length !== 0 && sighting.birds_id.trim().length !== 0 && sighting.user_id.trim().length !== 0
+        sighting.date_of_sighting.trim().length !== 0 && sighting.location_of_sighting.trim().length !== 0 
     ), [sighting]);
 
     return (
@@ -71,22 +75,14 @@ const Sightings = () =>{
                         <label htmlFor="exampleFormControlTextarea1" className="form-label">Observation :</label>
                         <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"
                             onChange = {(event)=>{
-                                onFieldsChange("obdervation", event.target.value)
+                                onFieldsChange("observation", event.target.value)
                             }}
                         ></textarea>
                     </div>
 
-                    <div className="mb-3">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Bird ID :</label>
-                        <input type="title" className="form-control" id="exampleFormControlInput1"
-                            onChange = {(event)=>{
-                                onFieldsChange("observation", event.target.value)
-                            }}
-                        />
-    
-                    </div>
+                       
                     <div>
-                        <button type="submit" className="btn btn-primary mb-3" disabled={!submitButtonActive}
+                        <button type="submit" className="btn btn-primary mb-3" 
                             onClick={postSighting}
                         >
                             SUBMIT
