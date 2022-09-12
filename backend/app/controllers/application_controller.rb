@@ -7,9 +7,16 @@ class ApplicationController < Sinatra::Base
     configure do
         enable :cross_origin
     end
-    
+
     before do
         response.headers['Access-Control-Allow-Origin'] = '*'
+    end
+
+    before do
+        if request.post? || request.patch?
+            request.body.rewind
+            @request_payload = JSON.parse request.body.read, symbolize_names: true
+        end
     end
       
       # routes...
