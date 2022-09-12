@@ -10,6 +10,7 @@
 
 - [Description](#description)
 - [Features](#features)
+- [Installation Instructions](#requirements)
 - [Development](#development)
 - [Live Link](#live-link)
 - [Setup Instructions and Technology](#technology-used)
