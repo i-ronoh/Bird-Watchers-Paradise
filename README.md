@@ -66,6 +66,24 @@ _**Active Record**_, _**Sinatra**_, _**Sqlite3**_ helped in creating the databas
 
 ---
 
+## [Installation-Instructions]() 
+### requirements:
+- chrome browser/any other browser
+- Internet connection
+- Navigate to the git repository
+- Fork  the repo using the fork button on this repository
+- Git clone the forked repository to your local machine.
+- Then perform the following two steps to run the Application:
+#### BackEnd SetUP
+- Open the backend folder on A terminal
+- Then, run `bundle install` to install require gems
+- run  (`bundle exec rake server`) to run the backend
+#### FrontEnd SetUP
+- Navigate to the frontEnd folder and open it in the terminal
+- run (`npm start`) to run the applicationon the browser.
+- Done..! the site is up and running locally.
+
+
 ## Development
 
 ---
