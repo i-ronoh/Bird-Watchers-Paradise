@@ -35,15 +35,16 @@
     gap: 60px;
     margin-left: 100px;
     position: relative;
-    top: 120px;
+    top: 110px;
 }
 
 .flexx {
     display: grid !important;
     border: 0.1px solid rgba(36, 148, 36, 0.849);
     box-shadow: 0px 5px 5px 0px !important;
-    min-height:45vh;
+    min-height:40vh;
     position: relative !important;
+    background-image: url(https://images.unsplash.com/photo-1547104442-044448b73426?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fGRld3klMjB3aGl0ZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60);
     /* top: -300px !important; */
     z-index: 1;
     background-color: rgba(245, 245, 245, 0.308);
@@ -97,9 +98,21 @@
 }
 
 .search-filter :first-child{
-    padding: 15px;
+    padding: 10px;
     border-radius: 10px;
     font-family: 'IBM Plex Mono', monospace;
     font-size: 20px;
     color: rgb(41, 105, 27);
+    font-weight: bolder;
+}
+
+.birds-btn{
+    width: 200px;
+    padding: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    color: black;
+    background-color: rgb(203, 243, 208);
+    border: 2px solid rgb(41, 105, 27)
 }

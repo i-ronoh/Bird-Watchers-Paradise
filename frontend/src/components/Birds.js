@@ -208,24 +208,23 @@ function Birds(){
                         <div className="col-md-5 ">
 
                             <div className="card flexx" style={{ width:"500px" }}>
-                            <img
-                                src={bird.image}
-                                className="card-img-top img-fluid"
-                                alt="..."
-                            // style={{ width: "100%" }}
-                            />
-                            <div className="card-body">
-                                <h5 className="card-title">Name:{bird.name}</h5>
-                                <h5 className="card-title">Primary Color:{bird.primary_color}</h5>
-                                <p className="card-text">Beak Type: {bird.beak}</p>
-                                <p className="card-text">Feet Type: {bird.feet_type}</p>
+                                <img
+                                    src={bird.image}
+                                    className="card-img-top img-fluid"
+                                    alt="..."
+                                // style={{ width: "100%" }}
+                                />
+                                <div className="card-body">
+                                    <h5 className="card-title">Name:{bird.name}</h5>
+                                    <h5 className="card-title">Primary Color:{bird.primary_color}</h5>
+                                    <p className="card-text">Beak Type: {bird.beak}</p>
+                                    <p className="card-text">Feet Type: {bird.feet_type}</p>
 
-                                <p className="card-text">{bird.flies}</p>
-                                <button type="submit" className="btn btn-primary mb-5" onClick = {() =>{sighted(bird.id)}}
-                        >
-                            Seen This Bird? Click to Upload
-                        </button>
-                            </div>
+                                    <p className="card-text">{bird.flies}</p>
+                                    <button type="submit" className="birds-btn btn-primary mb-5" onClick = {() =>{sighted(bird.id)}}
+                                    > Seen This Bird? <br/>Click to Upload
+                                    </button>
+                                </div>
                             </div>
 
                         </div>
