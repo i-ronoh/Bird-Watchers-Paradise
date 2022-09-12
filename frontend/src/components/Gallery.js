@@ -19,7 +19,33 @@ function Gallery(){
     
     return(
         <>
-            gallery 
+            <div className="gallery-container ">
+                {gallery.map((sighting) => (
+                    <div
+                        className="row "
+                        style={{ marginBottom: "3em", marginTop: "3em" }}
+                    >
+                        <div className="col-md-5 ">
+                            <div className="card flexx" style={{ width:"500px" }}>
+                            <img
+                                src={sighting.bird_image}
+                                className="card-img-top img-fluid"
+                                alt="..."
+                            // style={{ width: "100%" }}
+                            />
+                            <div className="card-body">
+                                <h5 className="card-title">Bird ID:{sighting.birds_id}</h5>
+                                <h5 className="card-title">Name:{sighting.bird_name}</h5>
+                                <h5 className="card-title">Date Seen:{ sighting.date_of_sighting}</h5>
+                                <p className="card-text">Sighting Location: {sighting.location_of_sighting}</p>
+                                <p className="card-text">Sighting Observation: {sighting.observation}</p>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
             {/* <div className="bird-container ">
                 {birds.map((bird) => (
                     <div
