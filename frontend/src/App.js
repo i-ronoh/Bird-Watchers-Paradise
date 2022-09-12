@@ -11,7 +11,7 @@ function App() {
         <Navigation />
         <Routes>
           {/* <Route exact path='/' element={<Header/>} /> */}
-          <Route exact path='/login' element={<Birds/>} />
+          <Route exact path='/birds' element={<Birds/>} />
           {/* <Route exact path='/register' element={<Sightings/>} /> */}
 
         </Routes>
