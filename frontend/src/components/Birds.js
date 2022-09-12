@@ -1,4 +1,6 @@
 import React, {useEffect, useState, useRef} from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import './birds.css'
 
 function Birds(){
@@ -109,6 +111,12 @@ function Birds(){
             });
     }
 
+    const navigate = useNavigate();
+
+    const sighted = (birdie)=>{
+        navigate(`/sightings/${birdie}`)
+    };
+
     return(
         <>
             <div className="birds-head">
@@ -209,7 +217,10 @@ function Birds(){
                                 <p className="card-text">Feet Type: {bird.feet_type}</p>
 
                                 <p className="card-text">{bird.flies}</p>
-
+                                <button type="submit" className="btn btn-primary mb-3" onClick = {() =>{sighted(bird.id)}}
+                        >
+                            Seen This Bird? Click to Upload
+                        </button>
                             </div>
                             </div>
 
@@ -217,6 +228,7 @@ function Birds(){
                     </div>
                 ))}
             </div>
+
         </>
     );
 }
