@@ -2,7 +2,21 @@
 
 ## By Ivy Ronoh
 
-### _Bird-Watchers-Paradise_ landing page
+### _Bird-Watchers-Paradise_ 
+
+#### Home Page
+##### ![image](./frontend/src/components/images/bwp-landing.png)
+
+#### Bird-Log Page
+##### ![image](./frontend/src/components/images/bwp-log.png)
+
+
+#### Upload Sighting Page
+##### ![image](./frontend/src/components/images/bwp-upload.png)
+
+#### Gallery Page
+##### ![image](./frontend/src/components/images/bwp-sightings.png)
+
 
 ![Bird-Watchers-Paradise]
 
