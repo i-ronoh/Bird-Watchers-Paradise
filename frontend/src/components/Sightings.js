@@ -51,20 +51,20 @@ const Sightings = () =>{
         <div className="sightings-head">
             <h3 className="sightings-title">UPLOAD SIGHTING</h3>
         </div>
-        <div className="container">
+        <div className="sightings-container">
             <div className="row" style={{marginTop: "5em"}}>
                 <div className="col-md-9 shadow p-5 mb-5 bg-body rounded">
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Date :</label>
-                        <input type="title" className="form-control" id="exampleFormControlInput1"
+                        <label htmlFor="exampleFormControlInput1" className="sightings-form-label">Date :</label>
+                        <input type="title" className="sightings-form-control" id="exampleFormControlInput1"
                             onChange = {(event)=>{
                                 onFieldsChange("date_of_sighting", event.target.value)
                             }}
                         />
 
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlInput1" className="form-label">Location :</label>
-                        <input type="title" className="form-control" id="exampleFormControlInput1"
+                        <label htmlFor="exampleFormControlInput1" className="sightings-form-label">Location :</label>
+                        <input type="title" className="sightings-form-control" id="exampleFormControlInput1"
                             onChange = {(event)=>{
                                 onFieldsChange("location_of_sighting", event.target.value)
                             }}
@@ -72,8 +72,8 @@ const Sightings = () =>{
     
                     </div>
                     <div className="mb-3">
-                        <label htmlFor="exampleFormControlTextarea1" className="form-label">Observation :</label>
-                        <textarea className="form-control" id="exampleFormControlTextarea1" rows="5"
+                        <label htmlFor="exampleFormControlTextarea1" className="sightings-form-label">Observation :</label>
+                        <textarea className="sightings-form-control" id="exampleFormControlTextarea1" rows="5"
                             onChange = {(event)=>{
                                 onFieldsChange("observation", event.target.value)
                             }}
@@ -82,7 +82,7 @@ const Sightings = () =>{
 
                        
                     <div>
-                        <button type="submit" className="btn btn-primary mb-3" 
+                        <button type="submit" className="sightings-btn btn-primary mb-3" 
                             onClick={postSighting}
                         >
                             SUBMIT
