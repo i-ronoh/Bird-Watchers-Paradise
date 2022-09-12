@@ -21,7 +21,7 @@ function Navigation() {
                 <Link className="link"  to="/birds">BIRD-LOG |</Link> 
             </li>
             <li className="nav-menu-item">
-                <Link className="link" to="/sightings">SIGHTINGS</Link>
+                <Link className="link" to="/gallery">GALLERY</Link>
             </li>
             </ul>
         </div>
