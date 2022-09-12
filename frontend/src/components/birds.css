@@ -1,38 +1,48 @@
+.birds-title {
+    position: relative;
+    top: 80px;
+    color: rgb(41, 105, 27);
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'IBM Plex Mono', monospace;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.filter{
+    position: relative;
+    top: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+}
+
+.filter :first-child{
+    padding: 15px;
+    font-size: 20px;
+    font-family: 'IBM Plex Mono', monospace;
+
+}
 
 .bird-container {
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
     margin-left: 100px;
-    /*  */
-}
-.bird-head {
-    height: 50vh;
-    z-index: -1;
-    background-image: url(https://images.unsplash.com/photo-1620072908599-6807c940929c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
-    object-fit: cover;
+    position: relative;
+    top: 120px;
 }
 
-.bird-title {
-    position:relative;
-    top: 100px;
-    color: whitesmoke;
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    font-family: 'Playfair Display', serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: rgb(88, 78, 78);
-}
 .flexx {
     display: grid !important;
     border: 0.1px solid rgba(36, 148, 36, 0.849);
     box-shadow: 0px 5px 5px 0px !important;
-    min-height:75vh;
+    min-height:45vh;
     position: relative !important;
     /* top: -300px !important; */
     z-index: 1;
@@ -54,11 +64,42 @@
     border-radius: 15px;
 }
 
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 .card-title {
     color: #208636;
-    font-family: 'Lora', serif;
+    font-family: 'IBM Plex Mono', monospace;
     font-weight: 900;
     font-size: 1.5em;
-    letter-spacing: 0px;
     font-style: capitalize;
+}
+
+.card-text{
+    font-size: 1em;
+    font-family: 'IBM Plex Mono', monospace;
+    font-weight: bold;
+    padding-top: 15px;
+}
+.search-filter{
+    position: relative;
+    top: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    
+}
+
+.search-filter :first-child{
+    padding: 15px;
+    border-radius: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 20px;
+    color: rgb(41, 105, 27);
 }
