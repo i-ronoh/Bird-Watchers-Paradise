@@ -28,16 +28,16 @@
 
 .link {
     text-decoration: none;
-    color: whitesmoke !important;
+    color: rgb(240, 50, 50) !important;
     font-size: 18px;
     font-weight: bolder;
     -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: whitesmoke;
+    -webkit-text-stroke-color: rgb(44, 61, 134);
 }
 
 .link:hover {
     transform: scale(0.9);
-    color: brown;
+    color: rgb(57, 82, 18);
 }
 
 .nav-menu-item{
