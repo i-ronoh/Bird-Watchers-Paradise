@@ -17,7 +17,7 @@ class BirdsController <  ApplicationController
             birds = birds.where('lower(primary_color) = ? ', params[:primary_color].downcase) unless params[:primary_color].nil?
             birds = birds.where('lower(beak) = ? ', params[:beak].downcase) unless params[:beak].nil?
             birds = birds.where('lower(feet_type) = ? ', params[:feet_type].downcase) unless params[:feet_type].nil?
-            birds = birds.where('lower(flies) = ? ', params[:flies].downcase) unless params[:flies].nil?
+            birds = birds.where('flies = ? ', ActiveModel::Type::Boolean.new.cast(params[:flies])) unless params[:flies].nil?
         end
         
         birds.to_json
