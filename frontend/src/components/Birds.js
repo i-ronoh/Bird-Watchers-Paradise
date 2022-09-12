@@ -120,7 +120,7 @@ function Birds(){
     return(
         <>
             <div className="birds-head">
-                <h3 className="birds-title">THE BIRDS</h3>
+                <h3 className="birds-title">BIRDS DATABASE</h3>
             </div>
 
             <div className="filter">
@@ -143,7 +143,7 @@ function Birds(){
                 <div>
                     Feet Type:
                     <select onChange={(e)=> onFilterChange(e, "feet_type")} name="feet_type">
-                         <option disabled selected value> -- select a feet type-- </option>
+                         <option disabled selected value> -- Select Feet Type-- </option>
                         {
                             feetTypes.map((feetType, index)=>(
                                 <option value={feetType} key={index}>
@@ -155,9 +155,9 @@ function Birds(){
                 </div>
                 {/* beaks */}
                 <div>
-                    Beak Type
+                    Beak Type:
                     <select onChange={(e)=> onFilterChange(e, "beak")} name="beak">
-                        <option disabled selected value> -- select a beak type- </option>
+                        <option disabled selected value> -- Select Beak Type- </option>
                         {
                             beaks.map((beak, index)=>(
                                 <option value={beak} key={index}>
@@ -171,7 +171,7 @@ function Birds(){
                 <div>
                     Flies: 
                     <select onChange={(e)=> onFilterChange(e, "flies")} name="flies">
-                        <option disabled selected value> -- select whether it flies or not-- </option>
+                        <option disabled selected value> -- Does the Bird Fly?-- </option>
                         <option value={true}>
                             Yes
                         </option>
@@ -180,7 +180,10 @@ function Birds(){
                         </option>
                     </select>
                 </div>
+            </div>
                 {/* Search */}
+                
+            <div className="search-filter">
                 <div>
                     <button onClick={search}> 
                         Search
@@ -191,8 +194,9 @@ function Birds(){
                     <button onClick={clearSearch}> 
                         Clear Search
                     </button>
-                </div>
-            </div>
+                </div> 
+            </div>      
+               
 
             <div className="bird-container ">
                 {birds.map((bird) => (
@@ -217,7 +221,7 @@ function Birds(){
                                 <p className="card-text">Feet Type: {bird.feet_type}</p>
 
                                 <p className="card-text">{bird.flies}</p>
-                                <button type="submit" className="btn btn-primary mb-3" onClick = {() =>{sighted(bird.id)}}
+                                <button type="submit" className="btn btn-primary mb-5" onClick = {() =>{sighted(bird.id)}}
                         >
                             Seen This Bird? Click to Upload
                         </button>
