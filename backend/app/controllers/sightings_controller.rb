@@ -1,8 +1,24 @@
+require 'pry'
+
 class SightingsController <  ApplicationController
+
     
     get '/sightings' do
-        all_birdies = Sighting.all
-        all_birdies.to_json
+
+        all_birdies = Sighting.includes(:bird).all
+        x = all_birdies.map do |sighting|
+            # binding.pry
+            {
+                date_of_sighting: sighting.date_of_sighting,
+                location_of_sighting: sighting.location_of_sighting,
+                observation: sighting.observation,
+                birds_id: sighting.birds_id,
+                user_id: sighting.user_id,
+                bird_name: sighting.bird.name,
+                bird_image: sighting.bird.image
+            }
+        end
+        x.to_json
     end
     
     post '/sightings/upload' do
