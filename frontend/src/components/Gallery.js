@@ -1,6 +1,8 @@
 import React, {useEffect, useState, useRef} from 'react';
+import moment from 'moment';
 
-import './birds.css'
+
+import './gallery.css'
 
 function Gallery(){
 
@@ -19,26 +21,32 @@ function Gallery(){
     
     return(
         <>
-            <div className="gallery-container ">
+
+            <div className="birds-head">
+                <h3 className="birds-title">SIGHTINGS</h3>
+            </div>
+
+
+            <div className="gallery-container">
                 {gallery.map((sighting) => (
                     <div
                         className="row "
-                        style={{ marginBottom: "3em", marginTop: "3em" }}
+                        style={{ marginBottom: "1em", marginTop: "1em" }}
                     >
-                        <div className="col-md-5 ">
-                            <div className="card flexx" style={{ width:"500px" }}>
+                        <div className="col-md-4 ">
+                            <div className="gallery-card gallery-flexx" style={{ width:"1150px" }}>
                             <img
                                 src={sighting.bird_image}
-                                className="card-img-top img-fluid"
+                                className="gallery-card-img-top img-fluid"
                                 alt="..."
                             // style={{ width: "100%" }}
                             />
-                            <div className="card-body">
-                                <h5 className="card-title">Bird ID:{sighting.birds_id}</h5>
-                                <h5 className="card-title">Name:{sighting.bird_name}</h5>
-                                <h5 className="card-title">Date Seen:{ sighting.date_of_sighting}</h5>
-                                <p className="card-text">Sighting Location: {sighting.location_of_sighting}</p>
-                                <p className="card-text">Sighting Observation: {sighting.observation}</p>
+                            <div className="gallery-card-body">
+                                <h5 className="gallery-card-title">Bird ID:{sighting.birds_id}</h5>
+                                <h5 className="gallery-card-title">Name:{sighting.bird_name}</h5>
+                                <h5 className="gallery-card-title">Date Seen:{ moment(sighting.date_of_sighting).format("DD/MM/YYYY")}</h5>
+                                <p className="gallery-card-text">Sighting Location: {sighting.location_of_sighting}</p>
+                                <p className="gallery-card-text">Sighting Observation: {sighting.observation}</p>
                             </div>
                             </div>
                         </div>
