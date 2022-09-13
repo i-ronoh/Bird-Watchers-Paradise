@@ -92,7 +92,8 @@ _**Active Record**_, _**Sinatra**_, _**Sqlite3**_ helped in creating the databas
 #### BackEnd SetUP
 - Open the backend folder on A terminal
 - Then, run `bundle install` to install require gems
-- run  (`bundle exec rake server`) to run the backend
+- Afte running migrations using rake, rake db:seed to populate the database.
+- run  (`rackup confifg.ru`) to run the backend
 #### FrontEnd SetUP
 - Navigate to the frontEnd folder and open it in the terminal
 - run (`npm start`) to run the applicationon the browser.
