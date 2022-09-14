@@ -4,7 +4,7 @@ class SightingsController <  ApplicationController
 
     
     get '/sightings' do
-
+        # join birds and sightings tables using the birds_id stipulated in the sightings model
         all_birdies = Sighting.includes(:bird).all
         x = all_birdies.map do |sighting|
             # binding.pry
@@ -22,6 +22,8 @@ class SightingsController <  ApplicationController
     end
     
     post '/sightings/upload' do
+        # used request payload variable that was defined in app-controller 
+        # uses inheritance 
         sighting = Sighting.create(
             date_of_sighting: @request_payload[:date_of_sighting],
             location_of_sighting: @request_payload[:location_of_sighting],

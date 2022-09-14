@@ -10,9 +10,11 @@ class BirdsController <  ApplicationController
     end
 
     get '/birds' do 
+        # if name is provided by user, then search by name, else search by other query from query string below
         if !params[:name].nil? 
             birds = Bird.where(name: params[:name])
         else
+            # query string 
             birds = Bird.all
             birds = birds.where('lower(primary_color) = ? ', params[:primary_color].downcase) unless params[:primary_color].nil?
             birds = birds.where('lower(beak) = ? ', params[:beak].downcase) unless params[:beak].nil?

@@ -61,9 +61,11 @@ function Birds(){
         if(name || primaryColor || feetType || beakType || flies){
             url = url + "?";
         }else{
+            // it wont search if any  the filters are not defined
             return
         }
 
+        // checks if param exists, then checks if param is the only filter, or used in combination with another param filter
         if( name !== undefined) {
             url = url + ( url.indexOf("=") > -1 ? `&name=${name}`: `name=${name}` );
         }
@@ -144,6 +146,7 @@ function Birds(){
                     Feet Type:
                     <select onChange={(e)=> onFilterChange(e, "feet_type")} name="feet_type">
                          <option disabled selected value> -- Select Feet Type-- </option>
+                         {/* <option value="Human Feet" selected> Human Feet </option> */}
                         {
                             feetTypes.map((feetType, index)=>(
                                 <option value={feetType} key={index}>
