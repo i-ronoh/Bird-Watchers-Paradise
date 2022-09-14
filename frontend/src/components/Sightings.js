@@ -34,7 +34,7 @@ const Sightings = () =>{
             .then(response => response.json())
             .then(data => {
                 // do the redirect here here.
-                navigate('/sightings');
+                navigate('/gallery');
             }).catch((err)=>{
                 console.log(err);
             });
